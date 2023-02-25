@@ -1,0 +1,140 @@
+/* 全体 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* タイトル */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* 問題テーブル */
+#question-table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-size: 16px;
+  width: 100%;
+  max-width: 800px;
+  table-layout: fixed;
+}
+
+#question-table td {
+  border: 1px solid black;
+  width: 8%;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+#question-table input[type="text"] {
+  width: 40px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#question-table td.answer-correct {
+  background-color: #bdecb6;
+}
+
+#question-table td.answer-incorrect {
+  background-color: #ffc8c8;
+}
+
+/* チェックボタン */
+#check-button {
+  text-align: center;
+  margin: 20px auto;
+}
+
+#check-button button {
+  background-color: #008cba;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#check-button button:hover {
+  background-color: #0077a3;
+}
+
+/* メッセージ */
+#message {
+  text-align: center;
+  margin: 20px auto;
+  font-weight: bold;
+  font-size: 24px;
+  color: #f44336;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 600px) {
+  /* 問題テーブル */
+  #question-table td {
+    width: 16%;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  #question-table input[type="text"] {
+    width: 30px;
+    font-size: 14px;
+  }
+
+  /* チェックボタン */
+  #check-button button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* メッセージ */
+  #message {
+    font-size: 20px;
+  }
+}
+
+@media print {
+  /* 全体 */
+  body {
+    font-size: 14px;
+  }
+
+  /* タイトル */
+  h1 {
+    font-size: 24px;
+  }
+
+  /* 問題テーブル */
+  #question-table {
+    margin: 20px 0;
+  }
+
+  #question-table td {
+    width: 10%;
+    height: 30px;
+    font-size: 14px;
+    padding: 2px;
+  }
+
+  #question-table input[type="text"] {
+    width: 30px;
+    font-size: 14px;
+  }
+
+  /* チェックボタン */
+  #check-button {
+    display: none;
+  }
+  
+  /* メッセージ */
+  #message {
+  font-size: 18px;
+  }
+}
